@@ -39,33 +39,54 @@ body {
         
     .container {
         display: flex;
+        justify-content: space-between;
     }
-    // .circle {
-    //     width: 40px;
-    //     height: 40px;
-    //     background-color: #f5f6f7;
-    //     border-radius: 50%;
-    // }
-    // #switcher {
-    // display: none;
-    // }
-    // .toggle 
-    // .toggle::after 
-    // .toggle::before {
-    //     contain: "";
-        // display: block;
-    //     height: 1.8px;
-    //     width: 18px;
-    //     background: #000;
-    //     left: 0;
-    //     top: calc(50% - 1px);
-    // }
-    // .toggle::after {
-    //     top: 3.6px;
-    // }
-    // .toggle::before {
-    //     top: -3.6px;
-    // }
+    label {
+        display: block;
+        height: 40px;
+        width: 40px;
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+        }
+    #switcher {
+    display: none;
+    }
+    .toggle {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 9px);
+
+       &::after,
+       &::before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 18px;
+        background: #000;
+        position: absolute;
+       }
+
+       &::after {
+        top: -5.6px;
+       }
+
+       &::before {
+        top: 5.6px;
+       }
+    }
+
+   .menu {
+    width: 280px;
+    max-height: 0;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    }
 }
  
 

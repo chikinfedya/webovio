@@ -38,6 +38,48 @@ body h1 h2 h3 h4 {
 }
 .header .container {
   display: flex;
+  justify-content: space-between;
+}
+.header label {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.header #switcher {
+  display: none;
+}
+.header .toggle {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 9px);
+}
+.header .toggle::after, .header .toggle::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 18px;
+  background: #000;
+  position: absolute;
+}
+.header .toggle::after {
+  top: -5.6px;
+}
+.header .toggle::before {
+  top: 5.6px;
+}
+.header .menu {
+  width: 280px;
+  max-height: 0;
+  background: #fff;
+  overflow: hidden;
+  position: absolute;
 }
 
 .hero {
