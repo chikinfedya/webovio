@@ -40,6 +40,7 @@ body {
     .container {
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
     label {
         display: block;
@@ -48,10 +49,54 @@ body {
         background: #fff;
         border-radius: 50%;
         position: relative;
+        z-index: 1;
         }
     #switcher {
     display: none;
+    &:checked ~ .menu{
+        max-height: 600px;
+        padding: 25px;
+        }
+
+    &:checked + label .toggle {
+        transform: rotate(45deg);
+
+        &::after {
+            top: 0;
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(-90deg);
+        }
     }
+    }
+
+    // Пример как можно еще раз написать бургер
+    // &:checked {
+
+        // &~label {
+            
+            // & .toggle {
+                // transform: rotate(45deg);
+
+                // &::after {
+                    // top: 0;
+                // }
+
+                // &::before {
+                    // top: 0;
+                    // transform: rotate(-90deg);
+                // }
+            // }
+        // }
+
+        // &~.menu {
+            // max-height: 600px;
+            // padding: 25px;
+        // }
+    // }
+
     .toggle {
         display: block;
         width: 18px;
@@ -81,11 +126,17 @@ body {
     }
 
    .menu {
+    margin: 0;
     width: 280px;
     max-height: 0;
-    background: #fff;
+    background: rgb(154, 173, 135);
     overflow: hidden;
     position: absolute;
+    right: 25px;
+    top: 0;
+    border-radius: 20px;
+    list-style: none;
+    transition: all .5s;
     }
 }
  
@@ -145,3 +196,83 @@ position: relative;
     }
 }
 
+.comment-wrap {
+    background: #FFFFFF;
+    box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+    display: flex;
+    flex-wrap: wrap;
+
+    .comment {
+            width: 100%;
+        }
+    
+        img {
+            width: 90px;
+        }
+    
+        .names {
+            width: calc(100% - 90px);
+        }
+}
+
+// about
+.about {
+    .container {
+        padding-bottom: 150px;
+        border-bottom: 1px solid rgba(33, 56, 66, 0.0955529);
+        display: flex;
+        align-items: flex-end;
+    }
+    
+        &_left {
+            width: 50%;
+        }
+    
+        &_right {
+            width: 50%;
+    
+            &-wrap {
+                width: 474px;
+                padding: 244px 40px 60px;
+                margin-left: auto;
+            }
+        }
+}
+
+// projects
+.projects {
+    padding-top: 150px;
+
+    &_list {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+
+        &-item {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: 165px;
+            }
+
+            .project_thumb {
+                width: 50%;
+                position: relative;
+
+                & > img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .testimonial {
+                width: 453px;
+                padding: 30px;
+                position: absolute;
+                bottom: -65px;
+                right: -40px;
+                border-radius: 8px;
+            }
+        }
+    }
+}

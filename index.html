@@ -10,20 +10,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="/img/Webovio-100.jpg">
 </head>
 <body>
-    <header>
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
                 <img src="img/Logo.svg" alt="">
             </a>  
-            <input type="checkbox" name="" id="switcher">
+            <input type="checkbox" id="switcher">
             <label for="switcher">
                 <span class="toggle"></span>
             </label>
-            <ul>
+            <ul class="menu">
                 <li>Menu item</li>
                 <li>Menu item</li>
                 <li>Menu item</li>
@@ -41,48 +41,113 @@
         </section>
         <section class="brands">
             <div class="brands_list">
-                <img src="/img/16_Andrew-Porter-Logo.jpg" alt="">
-                <img src="/img/17_Jalen-Rose-Leadership-Academy-Logo.jpg" alt="">
-                <img src="/img/Wal.jpg" alt="">
-                <img src="/img/Ideal.jpg" alt="">
-                <img src="/img/PhalenLeadership.jpg" alt="">
+                <img src="img/16_Andrew-Porter-Logo.jpg" alt="">
+                <img src="img/17_Jalen-Rose-Leadership-Academy-Logo.jpg" alt="">
+                <img src="img/Wal.jpg" alt="">
+                <img src="img/Ideal.jpg" alt="">
+                <img src="img/PhalenLeadership.jpg" alt="">
             </div>
         </section>
-        <section>
-            <div>
-                <p>What we do for you</p>
-                <h3>Strategy. Design Content. Technology Development</h3>
-                <p>There’s no secret sauce, no wizard behind the curtain. What makes Aerolab tick is an interdisciplinary team with a
-                    framework that fosters candid collaboration.
-                </p>
-                <a href="#"> More know About us</a>
-            </div>
-            <div>
-                <p>With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build Brands and Help Them
-                    Succeed
-                </p>
-                <h4>Genevieve Rodriquez</h4>
-                <img src="/img/Oval.jpg" alt="">
-                <p>Founder & CEO, Webovio</p>
+        <section class="about">
+            <div class="container">
+               <div class="about_left">
+                    <p class="about_left_uptitle">What we do for you</p>
+                    <h2 class="about_left-title">Strategy. Design Content. Technology Development</h2>
+                    <div>
+                        <p class="about_left_lowertitle">There’s no secret sauce, no wizard behind the curtain. What makes Aerolab tick is an interdisciplinary team with a
+                            framework that fosters candid collaboration.
+                        </p> 
+                    </div>
+                    <a href="#"> More know About us</a>
+               </div>
+               <div class="about_right">
+                    <div class="about_right-wrap comment-wrap">
+                        <div class="comment">
+                            <p class="">With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build Brands and Help Them
+                                Succeed
+                            </p>
+                        </div>
+                        <img src="img/Oval.png" alt="">
+                        <div>
+                            <h3>Genevieve Rodriquez</h3> 
+                            <p>Founder & CEO, Webovio</p> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <hr>
-        <section>
-            <div>
-                <h3>We Have Some Awesomr Project.</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                    dummy text ever since the 1500s,
-                </p>
-                <img src="/img/Bitmap (2).jpg" alt="">
+        <section class="projects">
+            <div class="container">
+                <h2>We Have Some Awesome Project.</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+            <ul class="projects_list">
+                <li class="projects_list-item">
+                    <div class="project_thumb">
+                        <img src="img/thumb-1.jpg" alt="">
+                        <div class="testimonial comment-wrap">
+                            <div class="comment">
+                                <p class="">“In my history of working with trade show vendors, I can honestly say that there is not one company that I've ever
+                                worked with that has better service than Exhibit Systems.”
+                                </p>
+                            </div>
+                            <img src="img/Oval thumb-1.png" alt="">
+                            <div>
+                                <h3>Angel Armstrong</h3>
+                                <p>Founder & CEO, Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="projects_list-item">
+                    <div class="project_thumb">
+                        <img src="img/thumb-2.jpg" alt="">
+                        <div class="testimonial">
+                            <div class="comment comment-wrap">
+                                <p class="">With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build
+                                    Brands
+                                    and Help Them
+                                    Succeed
+                                </p>
+                            </div>
+                            <img src="img/Oval.png" alt="">
+                            <div>
+                                <h3>Genevieve Rodriquez</h3>
+                                <p>Founder & CEO, Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="projects_list-item">
+                    <div class="project_thumb">
+                        <img src="img/thumb-3.jpg" alt="">
+                        <div class="testimonial">
+                            <div class="comment comment-wrap">
+                                <p class="">With More than 10 Years of Knowledge and Expertise we Design and Code Websites and Apps, We Build
+                                    Brands
+                                    and Help Them
+                                    Succeed
+                                </p>
+                            </div>
+                            <img src="img/Oval.png" alt="">
+                            <div>
+                                <h3>Genevieve Rodriquez</h3>
+                                <p>Founder & CEO, Webovio</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-            </div>
-        </section>
+
+
+        <section style="height:50vh;"></section>
     </main>
     <footer class="footer">
         <div class="container">
-
         </div>
-        
     </footer>
 </body>
 </html>

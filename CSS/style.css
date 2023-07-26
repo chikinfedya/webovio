@@ -39,6 +39,7 @@ body h1 h2 h3 h4 {
 .header .container {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .header label {
   display: block;
@@ -47,9 +48,24 @@ body h1 h2 h3 h4 {
   background: #fff;
   border-radius: 50%;
   position: relative;
+  z-index: 1;
 }
 .header #switcher {
   display: none;
+}
+.header #switcher:checked ~ .menu {
+  max-height: 600px;
+  padding: 25px;
+}
+.header #switcher:checked + label .toggle {
+  transform: rotate(45deg);
+}
+.header #switcher:checked + label .toggle::after {
+  top: 0;
+}
+.header #switcher:checked + label .toggle::before {
+  top: 0;
+  transform: rotate(-90deg);
 }
 .header .toggle {
   display: block;
@@ -75,11 +91,17 @@ body h1 h2 h3 h4 {
   top: 5.6px;
 }
 .header .menu {
+  margin: 0;
   width: 280px;
   max-height: 0;
-  background: #fff;
+  background: rgb(154, 173, 135);
   overflow: hidden;
   position: absolute;
+  right: 25px;
+  top: 0;
+  border-radius: 20px;
+  list-style: none;
+  transition: all 0.5s;
 }
 
 .hero {
@@ -129,4 +151,69 @@ body h1 h2 h3 h4 {
   background: #FFFFFF;
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
   border-radius: 2px;
+}
+
+.comment-wrap {
+  background: #FFFFFF;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.145947);
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment-wrap .comment {
+  width: 100%;
+}
+.comment-wrap img {
+  width: 90px;
+}
+.comment-wrap .names {
+  width: calc(100% - 90px);
+}
+
+.about .container {
+  padding-bottom: 150px;
+  border-bottom: 1px solid rgba(33, 56, 66, 0.0955529);
+  display: flex;
+  align-items: flex-end;
+}
+.about_left {
+  width: 50%;
+}
+.about_right {
+  width: 50%;
+}
+.about_right-wrap {
+  width: 474px;
+  padding: 244px 40px 60px;
+  margin-left: auto;
+}
+
+.projects {
+  padding-top: 150px;
+}
+.projects_list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.projects_list-item {
+  display: flex;
+}
+.projects_list-item:not(:last-child) {
+  margin-bottom: 165px;
+}
+.projects_list-item .project_thumb {
+  width: 50%;
+  position: relative;
+}
+.projects_list-item .project_thumb > img {
+  display: block;
+  width: 100%;
+}
+.projects_list-item .testimonial {
+  width: 453px;
+  padding: 30px;
+  position: absolute;
+  bottom: -65px;
+  right: -40px;
+  border-radius: 8px;
 }/*# sourceMappingURL=style.css.map */
